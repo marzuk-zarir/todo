@@ -2,11 +2,27 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     line-height: 1.4;
+    background: #0cebeb;
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
 }
 
 input:focus,
 button:focus {
     box-shadow: none !important;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+}
+
+.list-group-item p {
+    margin: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
 }

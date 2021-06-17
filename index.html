@@ -14,5 +14,65 @@
         <script src="./js/app.js" defer></script>
         <title>Todo app - store your task</title>
     </head>
-    <body></body>
+    <body>
+        <div class="container mt-5">
+            <h1 class="display-6 text-center">Todo App</h1>
+            <form id="todo-form" class="py-4">
+                <div class="input-group">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter your todo"
+                    />
+                    <input type="submit" value="Add" class="btn btn-primary" />
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Incomplete Todo</h3>
+                    <ul id="complete-todo" class="list-group list-group-flush">
+                        <li class="list-group-item d-flex">
+                            <input type="checkbox" />
+                            <p class="lead">sample</p>
+                        </li>
+                        <li class="list-group-item d-flex">
+                            <input type="checkbox" />
+                            <p class="lead">sample</p>
+                        </li>
+                        <li class="list-group-item d-flex">
+                            <input type="checkbox" />
+                            <p class="lead">sample</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 mt-3 mt-lg-0">
+                    <h3>Complete Todo</h3>
+                    <ul
+                        id="incomplete-todo"
+                        class="list-group list-group-flush"
+                    >
+                        <li class="list-group-item d-flex">
+                            <input type="checkbox" checked />
+                            <p class="lead">sample</p>
+                            <button class="btn btn-sm btn-danger ms-auto">
+                                Delete
+                            </button>
+                        </li>
+                        <li class="list-group-item d-flex">
+                            <input type="checkbox" checked />
+                            <p class="lead">sample</p>
+                            <button class="btn btn-sm btn-danger ms-auto">
+                                Delete
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-secondary mt-4">
+                You have <span id="todo-count">4</span> pending todo
+            </p>
+        </div>
+    </body>
 </html>
