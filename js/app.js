@@ -5,6 +5,7 @@
  * Date: 17-06-2021
  *
  */
+const notification = document.querySelector('.notification');
 const todoForm = document.querySelector('#todo-form');
 const todoInput = todoForm.querySelector('input[type="text"]');
 const completeTodo = document.querySelector('#complete-todo');
@@ -15,7 +16,7 @@ const incompleteKey = '__incomplete_tasks__';
 
 window.addEventListener('DOMContentLoaded', init);
 
-// Main function
+// main function
 function init() {
     // show all todo when browser load
     showTodo(incompleteKey, (todo) => renderTodo(todo, incompleteTodo));
@@ -34,6 +35,8 @@ function init() {
         saveTodo(todo, incompleteKey);
         removeTodo(todo, completeKey);
     });
+
+    deleteCompleteTodo();
 
     updateCounter();
 
@@ -124,6 +127,21 @@ function removeTodo(taskText, localStorageKey) {
         }
     }
     localStorage.setItem(localStorageKey, JSON.stringify(tasks));
+}
+
+// delete todo when click delete button
+function deleteCompleteTodo() {
+    completeTodo.addEventListener('click', (e) => {
+        if (e.target.nodeName == 'BUTTON') {
+            let deleteItem = e.target.parentNode;
+            completeTodo.removeChild(deleteItem);
+            removeTodo(deleteItem.querySelector('p').innerText, completeKey);
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 1000);
+        }
+    });
 }
 
 // update counter

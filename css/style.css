@@ -31,3 +31,18 @@ form {
     text-decoration: line-through;
     color: var(--bs-gray);
 }
+
+.notification {
+    display: none;
+    max-width: 200px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
