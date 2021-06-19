@@ -10,3 +10,5 @@ Simple todo app with vanilla javascript. Users can store their todo in this app.
 
 -   Bootstrap
 -   Javascript
+
+Live: [Demo](https://marzuk-zarir.github.io/todoapp/)
