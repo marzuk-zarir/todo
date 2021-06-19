@@ -26,3 +26,8 @@ form {
     max-width: 600px;
     margin: 0 auto;
 }
+
+#complete-todo .lead {
+    text-decoration: line-through;
+    color: var(--bs-gray);
+}
